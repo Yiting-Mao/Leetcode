@@ -1,3 +1,25 @@
+//directly reverse
+class Solution {
+public:
+    int reverse(int x) {
+        long result=0;
+        int flag=(x<0)?1:0;
+        int max=0;
+        max=~max;
+        max=(unsigned int)max>>1;
+        if(x==-max-1) return 0;
+        x=abs(x);
+        while(x&&x%10==0)x=x/10;
+        while(x){
+            result=result*10+x%10;
+            x=x/10;
+        }
+        if(result>max)return 0;
+        else if(flag)result=-result;
+        return result;
+    }
+};
+
 //using string reverse, performance beats 6.91%
 class Solution {
 public:
