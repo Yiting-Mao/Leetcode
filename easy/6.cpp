@@ -6,7 +6,7 @@ public:
         int col=length/(numRows-1);
         if(length%(numRows-1)!=0)col++;
         char temp[numRows][col]={'1'};
-        for(int k=0;k<length;k++){
+        for(int k=0;k<length;k++){ //put characters into a 2-D array
             int i=k/(numRows-1);
             int j=k%(numRows-1);
             if(i%2==0){
