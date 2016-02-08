@@ -10,7 +10,7 @@ public:
         }
         while(x&&base>1){
             if(x/base!=x%10)return false;
-            x=(x-x/base*base)/10;
+            x=(x%base)/10;
             base/=100;
         }
         return true;
